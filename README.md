@@ -1,26 +1,16 @@
-# Basic OpenFlow Software Switch (BOFUSS)
+# in-Band OpenFlow Software Switch (in-BOFUSS)
 
-This is an [OpenFlow 1.3][ofp13] compatible user-space software switch implementation. The code is based on the [Ericsson TrafficLab 1.1 softswitch implementation][ericssonsw11], with changes in the forwarding plane to support
-OpenFlow 1.3. 
+This project is based on Eder's implementation of the [BOFUSS](https://github.com/CPqD/ofsoftswitch13) project (an openflow 1.3 software switch), to which enhanced in-band capabilities have been added. This project was carried out by Boby Nicusor Constantin within the framework of a master's degree project at the Polytechnic School of the UAH (Spain).  
 
-### [A paper that describes the basic architecture, selected use cases and a few benchmarks is available on Arxiv](https://arxiv.org/abs/1901.06699). 
-If you use the switch for academic purpuses, please consider refering to it.
+If you want to cite this work you can use the following citation:
 
-## [Please read the FAQ before posting an issue](https://github.com/CPqD/ofsoftswitch13/wiki/Frequently-Asked-Questions)
-
-Check the [Wiki](https://github.com/CPqD/ofsoftswitch13/wiki) for some resources that could possibly help you to modify the switch.  
-
-**UPDATE**: A new experimental branch with contributions from the [BEBA EU Project][beba-eu] is available with lots of performance improvements and OpenFlow extensions. If you want to try the code checkout to the BEBA-EU branch.
-
-```bash
-$ git checkout remotes/origin/BEBA-EU
+```latex
+@article{constantin2020desarrollo,
+  title={Desarrollo de una soluci{\'o}n de encaminamiento para tr{\'a}fico de control in-band en entornos SDN},
+  author={Constantin, Boby Nicusor and others},
+  year={2020}
+}
 ```
-
-The following components are available in this package:
-* `ofdatapath`: the switch implementation
-* `ofprotocol`: secure channel for connecting the switch to the controller
-* `oflib`: a library for converting to/from 1.3 wire format
-* `dpctl`: a tool for configuring the switch from the console
 
 
 # Getting Started
@@ -129,27 +119,3 @@ You can send requests to the switch using the `dpctl` utility.
     $ utilities/dpctl tcp:<switch-host>:<switch-port> flow-mod table=0,cmd=add in_port=1 meter:1
     ```
 
-For a complete list of commands and arguments, use the `--help` argument. Also, check the wiki for [Flow Mod examples](https://github.com/CPqD/ofsoftswitch13/wiki/Dpctl-Flow-Mod-Cases)
-
-# Contribute
-Please submit your bug reports, fixes and suggestions as pull requests on
-GitHub, or by contacting us directly.
-
-# License
-OpenFlow 1.3 Software Switch is released under the BSD license (BSD-like for
-code from the original Stanford switch).
-
-# Acknowledgments
-
-This project was supported by Ericsson Innovation Center in Brazil.
-Formerly maintained by CPqD in technical collaboration with Ericsson Research.
-
-[**List of Contributors**](https://github.com/CPqD/ofsoftswitch13/wiki/List-of-Contributors)
-
-# Contact
-E-mail: Eder Leao Fernandes (ederleaofernandes at gmail . com)
-
-[ofp13]: https://www.opennetworking.org/images/stories/downloads/specification/openflow-spec-v1.3.0.pdf
-[ericssonsw11]: https://github.com/TrafficLab/of11softswitch
-[compileubuntu14]: http://tocai.dia.uniroma3.it/compunet-wiki/index.php/Installing_and_setting_up_OpenFlow_tools
-[beba-eu]: http://www.beba-project.eu/ 

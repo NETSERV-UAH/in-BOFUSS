@@ -4,7 +4,7 @@ This project is based on Eder's implementation of the [BOFUSS](https://github.co
 
 If you want to cite this work you can use the following citation:
 
-```latex
+```tex
 @article{constantin2020desarrollo,
   title={Desarrollo de una soluci{\'o}n de encaminamiento para tr{\'a}fico de control in-band en entornos SDN},
   author={Constantin, Boby Nicusor and others},

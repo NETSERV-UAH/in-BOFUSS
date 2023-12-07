@@ -1,4 +1,4 @@
-# in-Band OpenFlow Software Switch (in-BOFUSS)
+# w/in-Band OpenFlow Software Switch (in-BOFUSS)
 
 This project is based on Eder's implementation of the [BOFUSS](https://github.com/CPqD/ofsoftswitch13) project (an openflow 1.3 software switch), to which enhanced in-band capabilities have been added. This project was carried out by Boby Nicusor Constantin within the framework of a master's degree project at the Polytechnic School of the UAH (Spain).  
 
